@@ -3,6 +3,8 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\API\Auth\AuthController;
+use App\Http\Controllers\API\WorkerController;
+use App\Http\Controllers\API\ShiftController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,5 +27,13 @@ Route::group(['prefix'=>'auth'], function () {
 });
 
 
+Route::middleware(['auth:sanctum'])->group(function () {
+    
+    Route::post('/shifts/{id}', [ShiftController::class, 'assignShifts']);
+    Route::resource('/shifts', ShiftController::class);
+
+    Route::resource('/workers', WorkerController::class);
+
+});
 
 
