@@ -7,7 +7,7 @@ use Illuminate\Foundation\Testing\WithFaker;
 use Tests\TestCase;
 use App\Models\User;
 use App\Models\Worker;
-use App\Models\TimeZone;
+use App\Models\Timezone;
 
 class workerTest extends TestCase
 {
@@ -19,7 +19,7 @@ class workerTest extends TestCase
      */
     public function test_workers_list()
     {
-        $timezone = TimeZone::factory()->create();
+        $timezone = Timezone::factory()->create();
         $user = User::factory()->create();
 
         $this->actingAs($user);
@@ -32,7 +32,7 @@ class workerTest extends TestCase
 
     public function test_add_worker()
     {
-        $timezone = TimeZone::factory()->create();
+        $timezone = Timezone::factory()->create();
         $user = User::factory()->create();
 
         $this->actingAs($user);
@@ -51,7 +51,7 @@ class workerTest extends TestCase
 
     public function test_show_worker()
     {
-        $timezone = TimeZone::factory()->create();
+        $timezone = Timezone::factory()->create();
         $user = User::factory()->create();
 
         $this->actingAs($user);
@@ -64,7 +64,7 @@ class workerTest extends TestCase
 
     public function test_edit_worker()
     {
-        $timezone = TimeZone::factory()->create();
+        $timezone = Timezone::factory()->create();
         $user = User::factory()->create();
 
         $this->actingAs($user);
@@ -84,7 +84,7 @@ class workerTest extends TestCase
 
     public function test_delete_worker()
     {
-        $timezone = TimeZone::factory()->create();
+        $timezone = Timezone::factory()->create();
         $user = User::factory()->create();
 
         $this->actingAs($user);
