@@ -10,7 +10,7 @@ use App\Models\Worker;
 
 class workerTest extends TestCase
 {
-    // use RefreshDatabase;
+   // use RefreshDatabase;
     /**
      * A basic feature test example.
      *
@@ -37,8 +37,8 @@ class workerTest extends TestCase
 
         $formData = [
             "name" => "Test worker",
-            "phone" => "1234567890",
-            "email" => "test@gmail.com",
+            "phone" => "1234567191",
+            "email" => "test42@gmail.com",
             "timezoneId" => 1
         ];
 
@@ -68,8 +68,8 @@ class workerTest extends TestCase
 
         $formData = [
             "name" => "Test worker",
-            "phone" => "1234567190",
-            "email" => "test1@gmail.com",
+            "phone" => "1234565151",
+            "email" => "tes41@gmail.com",
             "timezoneId" => 1
         ];
 

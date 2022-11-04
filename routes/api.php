@@ -28,7 +28,7 @@ Route::group(['prefix'=>'auth'], function () {
 
 Route::middleware(['auth:sanctum'])->group(function () {
     
-    Route::post('/shifts/{id}', [ShiftController::class, 'assignShifts']);
+    Route::post('/shifts/{id}', [ShiftController::class, 'assignShifts'])->name('shifts.assign');
     Route::resource('/shifts', ShiftController::class);
 
     Route::resource('/workers', WorkerController::class);

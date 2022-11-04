@@ -32,7 +32,7 @@ class WorkerInterfaceImplementation implements WorkerInterface{
             $worker = Worker::find($id);
 
             if(!$worker){
-
+                
                 $response = [
                     "message" => "worker is not exist",
                     "code" => 500

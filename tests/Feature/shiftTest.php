@@ -12,6 +12,7 @@ use App\Models\Shift;
 
 class shiftTest extends TestCase
 {
+   // use RefreshDatabase;
     /**
      * A basic feature test example.
      *
@@ -46,46 +47,46 @@ class shiftTest extends TestCase
             "workerShifts" => [
                 [
                     "shiftId" => $shift->id,
-                    "shiftDay" => "2022-07-31"
+                    "shiftDay" => "2022-11-29"
                 ],
                 [
                     "shiftId" => $shift1->id,
-                    "shiftDay" => "2022-07-30"
+                    "shiftDay" => "2022-11-30"
                 ]
 
             ]
         ];
 
-        $this->json('POST', route('generated::vMNUvvfqZ5tuzjrp', $worker->id), $formData)
+        $this->json('POST', route('shifts.assign', $worker->id), $formData)
         ->assertStatus(200);
     }
 
 
-    // public function test_update_shift_worker()
-    // {
-    //     $user = User::factory()->create();
+    public function test_update_shift_worker()
+    {
+        $user = User::factory()->create();
 
-    //     $this->actingAs($user);
+        $this->actingAs($user);
       
-    //     $worker = Worker::factory()->create();
+        $worker = Worker::factory()->create();
 
-    //     $shift = Shift::factory()->create();
+        $shift = Shift::factory()->create();
 
-    //     $shiftWorker = WorkerShift::factory()->create();
+        $shiftWorker = WorkerShift::factory()->create();
 
-    //     $formData = [
-    //         "workerShifts" => [
-    //             [
-    //                 "workerShiftId" => 21,
-    //                 "shiftId" => 1,
-    //                 "shiftDay" => "2022-07-31"
-    //             ]
-    //         ]
-    //     ];
+        $formData = [
+            "workerShifts" => [
+                [
+                    "workerShiftId" => $shiftWorker->id,
+                    "shiftId" => 1,
+                    "shiftDay" => "2022-12-02"
+                ]
+            ]
+        ];
 
-    //     $this->json('PUT', route('shifts.update', 72), $formData)
-    //     ->assertStatus(200);
-    // }
+        $this->json('PUT', route('shifts.update', 1), $formData)
+        ->assertStatus(200);
+    }
 
     public function test_delete_shift_worker()
     {
