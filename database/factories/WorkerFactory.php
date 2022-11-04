@@ -17,11 +17,21 @@ class WorkerFactory extends Factory
      */
     public function definition()
     {
+<<<<<<< HEAD
         return [
             'name' => fake()->name(),
             'email' => fake()->safeEmail(),
             'phone' => Str::random(10),
             'timezone_id' => 1, 
+=======
+        
+        return [
+            'name' => $this->faker->name(),
+            'email' => $this->faker->unique()->safeEmail(),
+            'phone' => Str::random(9),
+            //$this->faker->unique()->numberBetween(1,1000000000)
+            'timezone_id' => \App\Models\Timezone::pluck('id')->random(), 
+>>>>>>> edeeaa1b89af8af2dc16a2bda625163283dedbd2
         ];
     }
 }

@@ -1,5 +1,8 @@
 /node_modules
+<<<<<<< HEAD
 /public/build
+=======
+>>>>>>> edeeaa1b89af8af2dc16a2bda625163283dedbd2
 /public/hot
 /public/storage
 /storage/*.key
@@ -7,9 +10,15 @@
 .env
 .env.backup
 .phpunit.result.cache
+<<<<<<< HEAD
 Homestead.json
 Homestead.yaml
 auth.json
+=======
+docker-compose.override.yml
+Homestead.json
+Homestead.yaml
+>>>>>>> edeeaa1b89af8af2dc16a2bda625163283dedbd2
 npm-debug.log
 yarn-error.log
 /.idea

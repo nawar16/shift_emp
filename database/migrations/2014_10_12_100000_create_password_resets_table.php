@@ -4,7 +4,11 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
+<<<<<<< HEAD
 return new class extends Migration
+=======
+class CreatePasswordResetsTable extends Migration
+>>>>>>> edeeaa1b89af8af2dc16a2bda625163283dedbd2
 {
     /**
      * Run the migrations.
@@ -29,4 +33,8 @@ return new class extends Migration
     {
         Schema::dropIfExists('password_resets');
     }
+<<<<<<< HEAD
 };
+=======
+}
+>>>>>>> edeeaa1b89af8af2dc16a2bda625163283dedbd2

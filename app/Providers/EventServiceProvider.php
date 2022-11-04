@@ -10,7 +10,11 @@ use Illuminate\Support\Facades\Event;
 class EventServiceProvider extends ServiceProvider
 {
     /**
+<<<<<<< HEAD
      * The event to listener mappings for the application.
+=======
+     * The event listener mappings for the application.
+>>>>>>> edeeaa1b89af8af2dc16a2bda625163283dedbd2
      *
      * @var array<class-string, array<int, class-string>>
      */
@@ -29,6 +33,7 @@ class EventServiceProvider extends ServiceProvider
     {
         //
     }
+<<<<<<< HEAD
 
     /**
      * Determine if events and listeners should be automatically discovered.
@@ -39,4 +44,6 @@ class EventServiceProvider extends ServiceProvider
     {
         return false;
     }
+=======
+>>>>>>> edeeaa1b89af8af2dc16a2bda625163283dedbd2
 }

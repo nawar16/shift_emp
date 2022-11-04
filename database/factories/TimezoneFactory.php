@@ -17,7 +17,11 @@ class TimezoneFactory extends Factory
     public function definition()
     {
         return [
+<<<<<<< HEAD
             'title' => "Auganda",
+=======
+            'title' => "Syria",
+>>>>>>> edeeaa1b89af8af2dc16a2bda625163283dedbd2
             'utc_offset' => "+00:00",
         ];
     }

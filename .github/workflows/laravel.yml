@@ -19,7 +19,11 @@ jobs:
     - name: Copy .env
       run: php -r "file_exists('.env') || copy('.env.example', '.env');"
     - name: Install Dependencies
+<<<<<<< HEAD
       run: composer install  --ignore-platform-reqs
+=======
+      run: composer install --ignore-platform-reqs
+>>>>>>> edeeaa1b89af8af2dc16a2bda625163283dedbd2
     - name: Generate key
       run: php artisan key:generate
     - name: Directory Permissions

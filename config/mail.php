@@ -42,7 +42,11 @@ return [
             'username' => env('MAIL_USERNAME'),
             'password' => env('MAIL_PASSWORD'),
             'timeout' => null,
+<<<<<<< HEAD
             'local_domain' => env('MAIL_EHLO_DOMAIN'),
+=======
+            'auth_mode' => null,
+>>>>>>> edeeaa1b89af8af2dc16a2bda625163283dedbd2
         ],
 
         'ses' => [
@@ -59,7 +63,11 @@ return [
 
         'sendmail' => [
             'transport' => 'sendmail',
+<<<<<<< HEAD
             'path' => env('MAIL_SENDMAIL_PATH', '/usr/sbin/sendmail -bs -i'),
+=======
+            'path' => env('MAIL_SENDMAIL_PATH', '/usr/sbin/sendmail -t -i'),
+>>>>>>> edeeaa1b89af8af2dc16a2bda625163283dedbd2
         ],
 
         'log' => [
