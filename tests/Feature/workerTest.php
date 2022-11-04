@@ -7,18 +7,11 @@ use Illuminate\Foundation\Testing\WithFaker;
 use Tests\TestCase;
 use App\Models\User;
 use App\Models\Worker;
-<<<<<<< HEAD
-
-class workerTest extends TestCase
-{
-   // use RefreshDatabase;
-=======
 use App\Models\Timezone;
 
 class workerTest extends TestCase
 {
     // use RefreshDatabase;
->>>>>>> edeeaa1b89af8af2dc16a2bda625163283dedbd2
     /**
      * A basic feature test example.
      *
@@ -26,10 +19,7 @@ class workerTest extends TestCase
      */
     public function test_workers_list()
     {
-<<<<<<< HEAD
-=======
         $timezone = Timezone::factory()->create();
->>>>>>> edeeaa1b89af8af2dc16a2bda625163283dedbd2
         $user = User::factory()->create();
 
         $this->actingAs($user);
@@ -42,25 +32,15 @@ class workerTest extends TestCase
 
     public function test_add_worker()
     {
-<<<<<<< HEAD
-=======
-        $timezone = Timezone::factory()->create();
->>>>>>> edeeaa1b89af8af2dc16a2bda625163283dedbd2
         $user = User::factory()->create();
 
         $this->actingAs($user);
       
 
         $formData = [
-<<<<<<< HEAD
-            "name" => "Test worker",
-            "phone" => "1234567191",
-            "email" => "test42@gmail.com",
-=======
             "name" => "Test",
             "phone" => "1234567890",
             "email" => "test@gmail.com",
->>>>>>> edeeaa1b89af8af2dc16a2bda625163283dedbd2
             "timezoneId" => 1
         ];
 
@@ -70,10 +50,7 @@ class workerTest extends TestCase
 
     public function test_show_worker()
     {
-<<<<<<< HEAD
-=======
         $timezone = Timezone::factory()->create();
->>>>>>> edeeaa1b89af8af2dc16a2bda625163283dedbd2
         $user = User::factory()->create();
 
         $this->actingAs($user);
@@ -86,10 +63,7 @@ class workerTest extends TestCase
 
     public function test_edit_worker()
     {
-<<<<<<< HEAD
-=======
         $timezone = Timezone::factory()->create();
->>>>>>> edeeaa1b89af8af2dc16a2bda625163283dedbd2
         $user = User::factory()->create();
 
         $this->actingAs($user);
@@ -97,15 +71,9 @@ class workerTest extends TestCase
         $worker = Worker::factory()->create();
 
         $formData = [
-<<<<<<< HEAD
-            "name" => "Test worker",
-            "phone" => "1234565151",
-            "email" => "tes41@gmail.com",
-=======
             "name" => "Test",
             "phone" => "1234567190",
             "email" => "test1@gmail.com",
->>>>>>> edeeaa1b89af8af2dc16a2bda625163283dedbd2
             "timezoneId" => 1
         ];
 
@@ -115,10 +83,7 @@ class workerTest extends TestCase
 
     public function test_delete_worker()
     {
-<<<<<<< HEAD
-=======
         $timezone = Timezone::factory()->create();
->>>>>>> edeeaa1b89af8af2dc16a2bda625163283dedbd2
         $user = User::factory()->create();
 
         $this->actingAs($user);
