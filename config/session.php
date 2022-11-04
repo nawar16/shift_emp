@@ -72,11 +72,7 @@ return [
     |
     */
 
-<<<<<<< HEAD
-    'connection' => env('SESSION_CONNECTION'),
-=======
     'connection' => env('SESSION_CONNECTION', null),
->>>>>>> edeeaa1b89af8af2dc16a2bda625163283dedbd2
 
     /*
     |--------------------------------------------------------------------------
@@ -104,11 +100,7 @@ return [
     |
     */
 
-<<<<<<< HEAD
-    'store' => env('SESSION_STORE'),
-=======
     'store' => env('SESSION_STORE', null),
->>>>>>> edeeaa1b89af8af2dc16a2bda625163283dedbd2
 
     /*
     |--------------------------------------------------------------------------
@@ -163,11 +155,7 @@ return [
     |
     */
 
-<<<<<<< HEAD
-    'domain' => env('SESSION_DOMAIN'),
-=======
     'domain' => env('SESSION_DOMAIN', null),
->>>>>>> edeeaa1b89af8af2dc16a2bda625163283dedbd2
 
     /*
     |--------------------------------------------------------------------------

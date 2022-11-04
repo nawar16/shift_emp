@@ -2,15 +2,9 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-<<<<<<< HEAD
-use App\Http\Controllers\API\ShiftController;
-use App\Http\Controllers\API\WorkerController;
-use App\Http\Controllers\API\Auth\AuthController;
-=======
 use App\Http\Controllers\API\Auth\AuthController;
 use App\Http\Controllers\API\WorkerController;
 use App\Http\Controllers\API\ShiftController;
->>>>>>> edeeaa1b89af8af2dc16a2bda625163283dedbd2
 
 /*
 |--------------------------------------------------------------------------
@@ -32,16 +26,10 @@ Route::group(['prefix'=>'auth'], function () {
     Route::post('/login', [AuthController::class, 'loginUser']);
 });
 
-<<<<<<< HEAD
-Route::middleware(['auth:sanctum'])->group(function () {
-    
-    Route::post('/shifts/{id}', [ShiftController::class, 'assignShifts'])->name('shifts.assign');
-=======
 
 Route::middleware(['auth:sanctum'])->group(function () {
     
     Route::post('/shifts/{id}', [ShiftController::class, 'assignShifts']);
->>>>>>> edeeaa1b89af8af2dc16a2bda625163283dedbd2
     Route::resource('/shifts', ShiftController::class);
 
     Route::resource('/workers', WorkerController::class);
