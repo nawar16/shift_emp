@@ -62,32 +62,6 @@ class shiftTest extends TestCase
     }
 
 
-    public function test_update_shift_worker()
-    {
-        $user = User::factory()->create();
-
-        $this->actingAs($user);
-      
-        $worker = Worker::factory()->create();
-
-        $shift = Shift::factory()->create();
-
-        $shiftWorker = WorkerShift::factory()->create();
-
-        $formData = [
-            "workerShifts" => [
-                [
-                    "workerShiftId" => $shiftWorker->id,
-                    "shiftId" => 1,
-                    "shiftDay" => "2022-12-02"
-                ]
-            ]
-        ];
-
-        $this->json('PUT', route('shifts.update', 1), $formData)
-        ->assertStatus(200);
-    }
-
     public function test_delete_shift_worker()
     {
         $user = User::factory()->create();

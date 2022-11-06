@@ -2,10 +2,13 @@
 
 namespace Tests;
 
+use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Illuminate\Contracts\Console\Kernel;
+use Illuminate\Support\Facades\Artisan;
 
 trait CreatesApplication
 {
+    use DatabaseTransactions;
     /**
      * Creates the application.
      *
@@ -17,6 +20,13 @@ trait CreatesApplication
 
         $app->make(Kernel::class)->bootstrap();
 
+        $this->clearCache();
+
         return $app;
+    }
+
+    private function clearCache(): void
+    {
+        Artisan::call('cache:clear');
     }
 }

@@ -19,9 +19,9 @@ return new class extends Migration
             $table->unsignedBigInteger('shift_id');
             $table->date('shift_day');
             $table->timestamps();
-            $table->foreign('worker_id')->references('id')->on('workers')->onDelete('cascade');
-            $table->foreign('shift_id')->references('id')->on('shifts')->onDelete('cascade');
         });
+
+
     }
 
     /**
