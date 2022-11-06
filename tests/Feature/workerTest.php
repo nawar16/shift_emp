@@ -33,15 +33,16 @@ class workerTest extends TestCase
     public function test_add_worker()
     {
         $user = User::factory()->create();
-
+        
         $this->actingAs($user);
       
+        $timezone = Timezone::factory()->create();
 
         $formData = [
             "name" => "Test",
             "phone" => "1234567890",
             "email" => "test@gmail.com",
-            "timezoneId" => 1
+            "timezoneId" => $timezone->id
         ];
 
         $this->json('POST', route('workers.store'), $formData)

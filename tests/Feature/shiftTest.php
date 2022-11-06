@@ -9,6 +9,7 @@ use App\Models\User;
 use App\Models\WorkerShift;
 use App\Models\Worker;
 use App\Models\Shift;
+use App\Models\Timezone;
 
 class shiftTest extends TestCase
 {
@@ -34,26 +35,19 @@ class shiftTest extends TestCase
         $user = User::factory()->create();
 
         $this->actingAs($user);
-      
-        $worker = Worker::factory()->create();
 
-        $shift = Shift::factory()->create();
-
-        $shift1 = Shift::factory()->create();
-
+        $timezone = Timezone::factory()->create();
         
+        $worker = Worker::factory()->create();
+        
+        $shift = Shift::factory()->create();
 
         $formData = [
             "workerShifts" => [
                 [
                     "shiftId" => $shift->id,
-                    "shiftDay" => "2022-11-29"
-                ],
-                [
-                    "shiftId" => $shift1->id,
-                    "shiftDay" => "2022-11-30"
+                    "shiftDay" => "2022-12-02"
                 ]
-
             ]
         ];
 
